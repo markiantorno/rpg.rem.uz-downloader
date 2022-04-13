@@ -58,6 +58,9 @@ cmake-build-*/
 out/
 .idea/
 
+# Obsidian
+.obsidian
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
