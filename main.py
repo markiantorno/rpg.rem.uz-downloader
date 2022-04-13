@@ -10,7 +10,7 @@ def parse_url(directory, url):
     for link in data.find_all("a"):
         if link.getText() == '../' or link["href"].endswith('.iso'):
             pass
-        elif link["href"].endswith(('.pdf', '.png', '.zip', '.txt', '.html')):
+        elif link["href"].endswith(('.pdf', '.png', '.zip', '.txt', '.html', '.jpg', '.jpeg')):
             download_pdf_from_url(directory, url + link["href"], link.contents[0])
         else:
             parse_url(directory + '/' + link.getText(), url + link["href"])
