@@ -9,14 +9,14 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-# parameters:
-# - name: image
-#   displayName: Release Branch
-#   type: string
-#   default: ubuntu-latest
-#   values:
-#   - rel_6_0
-#   - rel_5_7
+parameters:
+- name: image
+  displayName: Release Branch
+  type: string
+  default: ubuntu-latest
+  values:
+  - rel_6_0
+  - rel_5_7
 
 steps:
 - bash: |
