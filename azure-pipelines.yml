@@ -10,10 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 parameters:
-  - name: myParameter
-    displayName: Description of myParameter
-    default: defaultMyParameter
-    type: string
+- name: image
+  displayName: Pool Image
+  type: string
+  default: ubuntu-latest
+  values:
+  - windows-latest
+  - ubuntu-latest
+  - macOS-latest
 
 steps:
 - bash: |
