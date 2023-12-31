@@ -18,7 +18,8 @@ def parse_url(directory, url):
 
 def download_pdf_from_url(directory, url, filename):
     request = requests.get(url)
-    file_path = directory + '/' + filename
+    filename = sanitize_filename(filename)
+    file_path = sanitize_filepath(directory + '/' + filename)
     if os.path.exists(file_path):
     	print(f'Skipping {file_path}, as it already exists...')
     else:
